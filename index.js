@@ -39,6 +39,11 @@ mongoose.connection
         console.log('Err: ', err);
     })
 
+
+app.get('/', (req, res)=>{
+res.send('Yahooo!, API is Working...')
+})    
+
 app.post('/add_dataB', upload.single('file'), (req, res) => {
     console.log(req)
     const addUser = new bModule({
