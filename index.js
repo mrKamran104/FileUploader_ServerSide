@@ -177,7 +177,7 @@ app.get('/downloadB/:file', (req, res) => {
 
 app.get('/downloadP/:file', (req, res) => {
     // res.download(__dirname+'/uploads/Screenshot (34).png', 'mk.png')
-    bModule.findOne({ fileName: req.params.file })
+    pModule.findOne({ fileName: req.params.file })
         .then((data) => {
             console.log('show user', data)
             // var buf = Buffer.from(data.fileData.data, 'base64');
